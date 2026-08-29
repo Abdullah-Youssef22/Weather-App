@@ -1,0 +1,118 @@
+:root {
+    --bg-1: #443D6F;
+    --bg-2: #3F3762;
+    --bg-3: #24264D;
+}
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        var(--bg-1) 0%,
+        var(--bg-2) 50%,
+        var(--bg-3) 100%
+    );
+}
+.searching-form{
+    margin:40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 500px;
+    justify-self: center;
+}
+
+.city-name{
+    height: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    width: 500px;
+    box-sizing: border-box;
+}
+
+.submit-btn{
+    background-color: rgb(0, 152, 33);
+    color: #fff;
+    position: absolute;
+    right: 0px;
+}
+
+.btn {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+}
+.btn:hover{
+    filter: brightness(1.2);
+}
+/*  --- Displaying Data  ---  */
+.current-data{
+    width:100%;
+    display :flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    color:white;
+    background: linear-gradient(
+        to bottom,
+        color-mix(in srgb, var(--bg-1) 80%, white 30%) 0%,
+        color-mix(in srgb, var(--bg-2) 80%, white 30%) 50%,
+        color-mix(in srgb, var(--bg-3) 80%, white 30%) 100%
+    );
+    padding:10px 35px;
+    font-size: 20px;
+}
+#forecast{
+    margin-top: 100px;
+    width: 300px;
+    display :flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    color:white;
+    background: linear-gradient(
+        to bottom,
+        color-mix(in srgb, var(--bg-1) 90%, white 15%) 0%,
+        color-mix(in srgb, var(--bg-2) 90%, white 15%) 50%,
+        color-mix(in srgb, var(--bg-3) 90%, white 15%) 100%
+    );
+    padding:10px 25px;
+    font-size: 10px;
+}
+@media screen and (min-width:500px) {
+    .current-data{
+    width:70%;
+    }
+    
+}
+@media screen and (min-width:1050px) {
+    #forecast{
+        width: 150px;
+        flex-direction: row;
+    }
+}
+/* --- Data elements --- */
+.compass {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+}
+
+.north {
+    position: absolute;
+    top: -3px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.compass-arrow {
+    display: inline-block;
+    transform-origin: center;
+}

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <section class="searching-section">
+        <form action="" class="searching-form">
+            <input
+                type="text"
+                class="city-name"
+                id="city-name"
+                placeholder="Enter city name"
+                autocomplete="off"
+            >
+            <button
+                type="submit"
+                class="btn submit-btn"
+                id="submit-btn"
+            >
+                Get Weather
+            </button>
+        </form>
+    </section>
+
+    <section class="displaying-city-weather-section">
+
+        <div class="current-data">
+            <div class="current">
+                <p class="date" id="current-date"></p>
+
+                <div
+                    class="weather-animation"
+                    id="current-weather-animation"
+                ></div>
+
+                <div class="temps" id="current-temps">
+                    <div>
+                        <span
+                        class="temperature"
+                        id="current-temperature"
+                    ></span>
+                    <span
+                        class="feels-like"
+                        id="current-feels-like"
+                    ></span>
+                    </div>
+                    <span
+                        class="lowest-temp"
+                        id="current-lowest-temp"
+                    ></span>
+                    <span
+                        class="highest-temp"
+                        id="current-highest-temp"
+                    ></span>
+                </div>
+
+                <div
+                    class="humidity-container"
+                    id="current-humidity-container"
+                >
+                    <span
+                        class="humidity-emoji"
+                        id="current-humidity-emoji"
+                    >💧</span>
+                    <span
+                        class="humidity"
+                        id="current-humidity"
+                    ></span>
+                </div>
+                <div class="wind" id="current-wind">
+                    <span class="wind-emoji" id="current-wind-emoji">💨</span>
+                    <span class="wind-speed" id="current-wind-speed"></span>
+                
+                    <span class="compass">
+                        <span class="north">N</span>
+                        <span class="compass-arrow" id="current-compass-arrow">🡅</span>
+                    </span>
+                    <span class="wind-gusts" id="current-wind-gusts"></span>
+                </div>
+
+                <div
+                    class="rain-probability-container"
+                    id="current-rain-probability-container"
+                >
+                    <span
+                        class="rain-emoji"
+                        id="current-rain-emoji"
+                    >🌧️</span>
+                    <span
+                        class="rain-probability"
+                        id="current-rain-probability"
+                    ></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="forecast" id="forecast">
+            <!-- Forecast cards will be created dynamically using JavaScript -->
+        </div>
+
+    </section>
+
+    <script
+        type="module"
+        src="./JS/dataManager.js"
+    ></script>
+
+</body>
+
+</html>
