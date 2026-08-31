@@ -5,30 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
     </head>
 
     <body>
+        <div>
+            <button  type="button" class="btn location-btn Centered-item" id="location-btn">
+                📍 Use My Location
+            </button>
+        </div>
         <section class="searching-section">
+            <div id="map" class="Centered-item"></div>
             <form action="" class="searching-form">
-                <div class="search-input-container">
-                    <input
-                    type="text"
-                    class="city-name"
-                    id="city-name"
-                    placeholder="Enter city name"
-                    autocomplete="off"
-                    />
-
-                    <div class="suggestions" id="suggestions"></div>
-                </div>
-                <button type="submit" class="btn submit-btn" id="submit-btn">
-                    Get Weather
-                </button>
+                    <div class="search-input-container">
+                        <input
+                        type="text"
+                        class="city-name"
+                        id="city-name"
+                        placeholder="Enter city name"
+                        autocomplete="off"
+                        />
+    
+                        <div class="suggestions" id="suggestions"></div>
+                    </div>
+                    <button type="submit" class="btn submit-btn" id="submit-btn">
+                        Get Weather
+                    </button>
             </form>
         </section>
+        
 
         <section
-            class="displaying-city-weather-section"
+            class="displaying-city-weather-section "
             id="displaying-city-weather-section"
         >
             <div class="current-data" id="current-data"></div>
@@ -36,6 +46,10 @@
             <div class="" id="forecast-contaner"></div>
         </section>
 
-        <script type="module" src="./JS/dataManager.js"></script>
+        <script type="module" src="./JS/main.js"></script>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin="">
+        </script>
     </body>
 </html>

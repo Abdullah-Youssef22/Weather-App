@@ -12,7 +12,16 @@ body {
         var(--bg-3) 100%
     );
 }
+
 /* --- Search ---*/
+
+.searching-section{
+    display :flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:30px;
+}
 .search-input-container {
     position: relative;
     width: 100%;
@@ -74,6 +83,25 @@ body {
 .btn:hover{
     filter: brightness(1.2);
 }
+
+#map {
+    height: 450px;
+    width: 80%;
+}
+
+@media screen and (max-width : 500px) {
+    #map {
+    height: 90vw;
+    width: 100%;
+    }
+}
+@media screen and (min-width : 1024px) {
+    #map {
+    height: 500px;
+    width: 70%;
+    }
+}
+
 /*  --- Displaying Data  ---  */
 .current-data{
     width:100%;
@@ -228,5 +256,4 @@ span{
 
 
 }
-
 
